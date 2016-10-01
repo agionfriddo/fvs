@@ -7,7 +7,7 @@ const listUtil = listModule.util;
 const ListNode = listModule.ListNode;
 
 
-xdescribe('Utilities object', function () {
+describe('Utilities object', function () {
 
   // use the Node crypto library to compute SHA1
   // http://stackoverflow.com/a/6984262
@@ -17,7 +17,7 @@ xdescribe('Utilities object', function () {
   });
 });
 
-xdescribe('Functional Lists', function () {
+describe('Functional Lists', function () {
 
   let value1, value2, value3, value4,
     ln1, ln2, ln3, ln4;
@@ -75,7 +75,7 @@ xdescribe('Functional Lists', function () {
 
   it('has an append(otherList) function ', function () {
     // creates a new list that is the nodes of the originalList and all the nodes in otherList
-    
+
     // each node from the original list will need to be a copy, but each node from the otherList
     // should remain the same
 
@@ -96,7 +96,7 @@ xdescribe('Functional Lists', function () {
     expect(new_appended_ln.next.next.next.next).to.equal(ln2);
   });
 
-  it('has a remove(id) function that returns a new ListNode without the node with the id', function () {
+  xit('has a remove(id) function that returns a new ListNode without the node with the id', function () {
     // you may assume that ids are unique (so you'll only ever remove at most one node)
     // be careful to not change the original linked list though!
     let ln4_orig = ln4;
@@ -106,7 +106,7 @@ xdescribe('Functional Lists', function () {
     expect(new_ln4.next).to.equal(ln2);
   });
 
-  it('has a splitAt(id) function that returns a list only contains nodes upto the node with id', function () {
+  xit('has a splitAt(id) function that returns a list only contains nodes upto the node with id', function () {
     // e.g. (a b c d e).splitAt(c) => (a' b')
     let orig_ln4 = ln4;
     let splitLN4 = ln4.splitAt(ln2.id);
@@ -116,12 +116,12 @@ xdescribe('Functional Lists', function () {
     expect(orig_ln4).to.equal(ln4);
   });
 
-  it('has a find(id) function that returns the sublist that starts with a node with id', function () {
+  xit('has a find(id) function that returns the sublist that starts with a node with id', function () {
     let ln2_from_ln4 = ln4.find(ln2.id);
     expect(ln2_from_ln4).to.equal(ln2);
   });
 
-  it('has an insertAt(id, list) that returns a new list', function () {
+  xit('has an insertAt(id, list) that returns a new list', function () {
     // e.g. (a b c d e).insertAt(c, (f, g, h)) would return (a' b' f' g' h' c d e) as a new list
     // the original list's (c d e) should be the same as the new lists (c d e) in terms of object equality
 
@@ -135,7 +135,7 @@ xdescribe('Functional Lists', function () {
     expect(ln3.length()).to.equal(3);
   });
 
-  it('has a commonAncestor(list) function that finds the same node (by reference) in the two lists', function () {
+  xit('has a commonAncestor(list) function that finds the same node (by reference) in the two lists', function () {
     let ln2_branch = ln2.shiftNode('test node 1').shiftNode('Test node 2');
     expect(ln4.commonAncestor(ln2_branch)).to.equal(ln2);
   });
