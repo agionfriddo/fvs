@@ -8,6 +8,7 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "author": "",
+  "bin" : { "fvs" : "./fvs.js" },
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",

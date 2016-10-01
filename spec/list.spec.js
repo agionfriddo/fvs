@@ -96,7 +96,17 @@ describe('Functional Lists', function () {
     expect(new_appended_ln.next.next.next.next).to.equal(ln2);
   });
 
-  xit('has a remove(id) function that returns a new ListNode without the node with the id', function () {
+
+/*
+    ln1 = new ListNode(value1);
+    ln2 = new ListNode(value2, ln1);
+    ln3 = new ListNode(value3, ln2);
+    ln4 = new ListNode(value4, ln3);
+
+
+*/
+
+  it('has a remove(id) function that returns a new ListNode without the node with the id', function () {
     // you may assume that ids are unique (so you'll only ever remove at most one node)
     // be careful to not change the original linked list though!
     let ln4_orig = ln4;

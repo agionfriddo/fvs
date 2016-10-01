@@ -51,9 +51,16 @@ class ListNode {
     else if (this.next) return new ListNode(this.value, this.next.append(ln))
   }
 
-  remove(id) {
+  // remove(ln) {
+  //   if (!this.next) return;
 
-  }
+  //   new ListNode(this.value, ln);
+  //   else if (this.next) return new ListNode(this.value, this.next.append(ln))
+
+
+
+
+  // }
 }
 
 
